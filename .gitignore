@@ -1,0 +1,6 @@
+node_modules
+codebase
+*.zip
+*.tgz
+*.log
+.vscode
