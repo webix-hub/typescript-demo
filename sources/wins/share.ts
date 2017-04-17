@@ -1,4 +1,5 @@
 import {Dialog} from "./base";
+import "../views/iconcheck";
 
 export const action = "share";
 
