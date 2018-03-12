@@ -1,11 +1,10 @@
 export class Dialog{
-	constructor(grid:webix.ui.datatable){
-		this.grid = grid;
-	}
 	dialog:webix.ui.window;
 	form:webix.ui.form;
 	grid:webix.ui.datatable;
-
+	constructor(grid:webix.ui.datatable){
+		this.grid = grid;
+	}
 	init():void {}
 	oninit():void {}
 	apply():void {}
@@ -30,8 +29,8 @@ export class Dialog{
 	}
 	getButtons(ok:string, cancel:string):webix.ui.layoutConfig{
 		return { cols:[
-			{ view:"button", value:"Share", type:"form", click: () => this.apply() },
-			{ view:"button", value:"Cancel", click: () => this.close()}
-		]}
+			{ view:"button", value:ok, type:"form", click: () => this.apply() },
+			{ view:"button", value:cancel, click: () => this.close() }
+		]};
 	}
 }

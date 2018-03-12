@@ -12,7 +12,7 @@ export class DialogBox extends Dialog{
 			modal:true,
 			width:500,
 			body:{
-				view:"form", 
+				view:"form",
 				elements:[
 					{ view:"text", name:"title", label:"Title"},
 					{ view:"text", name:"year", label:"Year"},
@@ -27,18 +27,19 @@ export class DialogBox extends Dialog{
 		};
 	}
 	onshow(){
-		(<webix.ui.text>this.form["elements"].title).focus();
+		(<webix.ui.text>this.form.elements.title).focus();
 	}
 
 	apply(){
 		if(this.form.validate()){
-			var values = this.form.getValues();
-			if(values.id)
+			const values = this.form.getValues();
+			if(values.id){
 				this.grid.updateItem(values.id,values);
-			else{
-				var id = this.grid.add(values, 0);
+			} else{
+				const id = this.grid.add(values, 0);
 				this.grid.showItem(id);
-			}	
+			}
+			this.close();
 		}
 	}
 }

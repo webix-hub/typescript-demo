@@ -2,20 +2,25 @@
 	"extends": "tslint:latest",
 	"rules": {
 		"indent" : [true, "tabs"],
+		"import-spacing":false,
+		"ordered-imports":false,
 		"typedef-whitespace" : [false],
 		"whitespace" : [false],
-		"semicolon" : ["always"],
-		"quotemark" : ["double"],
+		"semicolon" : [true, "always"],
+		"quotemark" : [true, "double"],
 		"no-var-keyword" : true,
-		"no-unused-variable" :[ true, "check-parameters", {"ignore-pattern": "^_\\$_"}],
 		"no-trailing-whitespace":true,
+		"no-angle-bracket-type-assertion": false,
 		"no-consecutive-blank-lines":false,
 		"object-literal-sort-keys": false,
+		"no-empty": false,
 		"no-bitwise":true,
-		"max-line-length":[40],
 		"eofline" : false,
-		"trailing-comma" : "never",
+		"trailing-comma": [true, {"multiline": "never", "singleline": "never"}],
+		"object-literal-shorthand": false,
 		"curly":true,
+		"array-type":false,
+		"prefer-for-of":false,
 		"forin":false,
 		"one-line":[true,
 			"check-catch",
@@ -23,12 +28,15 @@
 			"check-finally",
 			"check-open-brace"
 		],
+		"prefer-conditional-expression":false,
+		"arrow-parens":[true, "ban-single-arg-parens"],
 		"variable-name":[true,
 			"check-format",
 			"allow-leading-underscore",
 			"ban-keywords"
 		],
-		"member-access":false
+		"member-access":false,
+		"only-arrow-functions": false
 	},
 	"rulesDirectory": []
 }

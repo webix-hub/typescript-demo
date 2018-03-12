@@ -13,7 +13,7 @@ export class DialogBox extends Dialog{
 			modal:true,
 			width:500,
 			body:{
-				view:"form", 
+				view:"form",
 				elements:[
 					{ cols:[
 						{ view:"iconcheck", name:"fb", icon:"facebook-square",label:"Facebook"},
@@ -37,7 +37,7 @@ export class DialogBox extends Dialog{
 	}
 	apply(){
 		if(this.form.validate()){
-			webix.alert("The film has been shared", function(){});
+			webix.alert("The film has been shared");
 			this.close();
 		}
 

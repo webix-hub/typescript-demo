@@ -8,6 +8,6 @@
     },
     "files":[
         "sources/**/*.ts",
-        "node_modules/@types/**"
+        "node_modules/webix/webix.d.ts"
     ]
 }

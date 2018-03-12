@@ -15,19 +15,19 @@ webix.protoUI({
 }, webix.ui.checkbox);
 */
 
-interface iconcheckConfig extends webix.ui.checkboxConfig{
+interface IconCheckConfig extends webix.ui.checkboxConfig{
 	icon?:string;
 }
 
 interface IconCheckApi{
 	name:string;
-	$init(config:iconcheckConfig):void;
+	$init(config:IconCheckConfig):void;
 	getIconLabel(icon:string, label:string):string;
 }
 
 interface IconCheckView extends webix.ui.checkbox, IconCheckApi {}
 
-const api:IconCheckApi = { 
+const api:IconCheckApi = {
 	name:"iconcheck",
 	$init:function(config){
 		config.label = (<IconCheckView>this).getIconLabel(config.icon, config.label);

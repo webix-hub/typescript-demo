@@ -12,7 +12,7 @@ export class DialogBox extends Dialog{
 			modal:true,
 			width:500,
 			body:{
-				view:"form", 
+				view:"form",
 				elements:[
 					{ view:"textarea", name:"review", label:"Review", labelPosition:"top"},
 					this.getButtons("Send", "Cancel")
@@ -24,11 +24,11 @@ export class DialogBox extends Dialog{
 		};
 	}
 	onshow(){
-		(<webix.ui.text>this.form["elements"].review).focus();
+		(<webix.ui.text>this.form.elements.review).focus();
 	}
 	apply(){
 		if(this.form.validate()){
-			webix.alert("Your review has been submitted", function(){});
+			webix.alert("Your review has been submitted");
 			this.close();
 		}
 	}
